@@ -121,37 +121,4 @@ button:hover {
   margin-top: 20px;
   color: #333;
   font-weight: bold;
-
-}
-
-.foto-nossa {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  display: block;
-  margin: 0 auto;
-}
-
-.card {
-  perspective: 1000px;
-  background-color: transparent;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 500px;
-  min-width: 0;
-  margin: 20px auto;
-  position: relative;
-  overflow: hidden; /* impede que a imagem ultrapasse o card */
-}
-
-@media (max-width: 600px) {
-  .foto-nossa {
-    max-width: 95vw;
-  }
-  .card {
-    max-width: 98vw;
-  }
 }
