@@ -1,11 +1,12 @@
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   background: linear-gradient(to right, #ff9a9e, #fad0c4);
-  min-height: 100vh;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;  
+  overflow: hidden;
 }
 
 .card {
@@ -56,7 +57,7 @@ body {
 
 .arrow {
   position: absolute;
-  right: -120px;
+  right: -20px;
   top: 50%;
   font-size: 2.5rem;
   cursor: pointer;
@@ -75,7 +76,7 @@ body {
 }
 
 .arrow-back {
-  left: -120px;
+  left: -20px;
   right: auto;
   color: #ff4081;
   background: none;
