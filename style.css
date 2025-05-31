@@ -1,11 +1,10 @@
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   background: linear-gradient(to right, #ff9a9e, #fad0c4);
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;  
+  height: 80vh;  
   overflow: hidden;
 }
 
