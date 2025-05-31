@@ -1,21 +1,100 @@
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  min-height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
 .card {
-  background-color: white;
+  perspective: 1000px;
+  background-color: transparent;
   border-radius: 15px;
-  padding: 30px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 500px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.girado .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  background: white;
+  padding: 30px;
   text-align: center;
-  max-width: 400px;
-  margin: 20px;
+  min-height: auto;
+  box-sizing: border-box;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto-nossa {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.arrow {
+  position: absolute;
+  right: -120px;
+  top: 50%;
+  font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+  color: #ff4081;
+  background: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: color 0.2s, background 0.2s;
+  z-index: 2;
+}
+
+.arrow-back {
+  left: -120px;
+  right: auto;
+  color: #ff4081;
+  background: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: color 0.2s, background 0.2s;
+  z-index: 2;
+}
+
+.hidden {
+  display: none !important;
 }
 
 h1 {

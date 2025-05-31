@@ -2,26 +2,34 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feliz 1 Ano de Namoro!</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>💘 Feliz 1 Ano de Namoro!</h1>
-    <p>Nem acredito que você me aguentou por tanto tempo... 😅</p>
-    <button onclick="revelarMensagem()">Clique para o presente 🎁</button>
-    <p id="mensagemEscondida" class="hidden">
-      Você ganhou: mais 365 dias me aturando! Parabéns pelo esforço! 😂❤️
-    </p>
-    <br>
-    <img src="./milk-and-mocha-dance.gif" alt="mocha" id="imagemEscondida" class="hidden" />
-    <p class="hidden" id="mensagemFinal">
-        Te amo muito! ❤️<br>
-        obs: tem mais mimos por vir hen
-    </p>
+  <div class="card" id="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <h1>💘 Feliz 1 Ano de Namoro!</h1>
+        <p>Nem acredito que você me aguentou por tanto tempo... 😅</p>
+        <button onclick="revelarMensagem()">Clique para o presente 🎁</button>
+        <p id="mensagemEscondida" class="hidden">
+          Você ganhou: mais 365 dias me aturando! Parabéns pelo esforço! 😂❤️
+        </p>
+        <br>
+        <img src="./milk-and-mocha-dance.gif" alt="mocha" id="imagemEscondida" class="hidden" />
+        <p class="hidden" id="mensagemFinal">
+          Te amo muito! ❤️<br>
+          obs: tem mais mimos por vir hen
+        </p>
+        <span id="arrow" class="arrow hidden" onclick="girarCard()">&#8594;</span>
+      </div>
+      <div class="card-back">
+        <span id="arrow-back" class="arrow arrow-back hidden" onclick="girarCard()">&larr;</span>
+        <img src="./us.jpg" alt="Nossa foto" class="foto-nossa" />
+      </div>
+    </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
